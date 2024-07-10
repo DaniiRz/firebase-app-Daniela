@@ -5,6 +5,7 @@ import { database } from '../config/firebase'; // Importa la configuración de l
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'; // Importa funciones de Firestore para consultas en tiempo real
 import CardProductos from '../components/cardProducts' ; // Importa el componente de tarjeta de producto
 
+
 // Definición del componente principal Home
 const Home = ({ navigation }) => {
     // Definición del estado local para almacenar los productos
@@ -49,6 +50,7 @@ const Home = ({ navigation }) => {
      // Renderiza la interfaz del componente Home
      return (
         <View style={styles.container}>
+            <Text style={styles.title2}>¡Bienvenido!</Text>
             <Text style={styles.title}>Productos Disponibles</Text>
 
             {/* Muestra la lista de productos si hay elementos, de lo contrario muestra un mensaje */}
@@ -88,8 +90,14 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     title: {
-        fontSize: 24,
+        fontSize: 20,
         fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+    title2: {
+        fontSize: 24,
+        fontWeight: 'bthin',
         textAlign: 'center',
         marginBottom: 20,
     },
@@ -98,10 +106,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginBottom: 10,
-        color:'#ff9800'
+        color:'#0D3B66'
     },
     Button: {
-        backgroundColor: '#0288d1',
+        backgroundColor: '#EE964B',
         padding: 10,
         borderRadius: 5,
         marginTop: 20,

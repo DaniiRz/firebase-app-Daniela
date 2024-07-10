@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     imagePicker: {
-        backgroundColor: '#0288d1',
+        backgroundColor: '#DAD2BC',
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     imagePickerText: {
-        color: 'white',
+        color: 'black',
         fontWeight: 'bold',
     },
     imagePreview: {
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     button: {
-        backgroundColor: '#0288d1',
+        backgroundColor: '#EE964B',
         padding: 10,
         borderRadius: 5,
         marginTop: 20,
