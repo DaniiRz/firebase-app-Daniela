@@ -1,4 +1,13 @@
-﻿# firebase-app-Daniela
+
+Integrantes: 
+    Daniela Ramirez 
+    Carlos Quintanilla
+
+
+
+
+
+# firebase-app-Daniela
 
 Dependecias: 
 
