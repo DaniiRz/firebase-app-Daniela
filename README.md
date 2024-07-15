@@ -1,13 +1,10 @@
+# firebase-app-Daniela-Carlos
 
 Integrantes: 
-    Daniela Ramirez 
-    Carlos Quintanilla
+    Daniela Ramirez  20220434
+    Carlos Quintanilla    20220367
 
 
-
-
-
-# firebase-app-Daniela
 
 Dependecias: 
 
