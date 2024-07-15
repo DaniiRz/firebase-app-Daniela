@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
-import { appFirebase } from '../config/firebase';
+import { appFirebase } from '../config/firebase.js';
 import Button from '../components/Boton';
+
 
 const auth = getAuth(appFirebase);
 
@@ -25,17 +28,17 @@ export default function Login(props) {
       });
   };
 
-  const InicioSesion =() =>{
-    signInWithEmailAndPassword(auth,email,password)
-    .then(()=>{
-      console.log('Iniciaste Sesión')
-      const user =userCredential.user;
-      console.log(user);
-    })
-    .catch(error=>{
-      console.log(error)
-    })
-  }
+  const InicioSesion = () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log('Iniciaste Sesión');
+        const user = userCredential.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <View style={styles.container}>
