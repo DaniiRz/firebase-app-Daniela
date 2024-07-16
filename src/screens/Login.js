@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { initializeAuth, getReactNativePersistence } from 'firebase/auth';
-import { initializeApp } from 'firebase/app';
-import { appFirebase } from '../config/firebase.js';
+import { app } from '../config/firebase.js';
 import Button from '../components/Boton';
 
 
-const auth = getAuth(appFirebase);
+const auth = getAuth(app);
 
-export default function Login(props) {
+export default function Login({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -32,6 +28,7 @@ export default function Login(props) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Iniciaste Sesión');
+        navigation.navigate('Home')
         const user = userCredential.user;
         console.log(user);
       })
