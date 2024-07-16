@@ -13,6 +13,11 @@
     "production": {}
   },
   "submit": {
-    "production": {}
+    "production": {},
+    "secrets": {
+      ".env": {
+        "source": ".env"
+      }
+    }
   }
 }
